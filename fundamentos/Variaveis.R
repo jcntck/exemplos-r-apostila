@@ -7,6 +7,7 @@ getwd()
 # Formas de declarar variáveis no R
 nome <- 'Fulano de Tal'
 idade = 25
+assign("ehAdulto", TRUE)
 
 # Regras de nomeação de variáveis
 
