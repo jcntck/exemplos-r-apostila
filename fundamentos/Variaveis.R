@@ -1,3 +1,5 @@
+# 01 - Declaração de variáveis
+
 # Configurando o diretório de trabalho
 setwd('C:/Users/Joao/Development/Apostila/fundamentos')
 
