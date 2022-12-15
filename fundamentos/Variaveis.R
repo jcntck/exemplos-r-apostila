@@ -18,7 +18,7 @@ variavel com espaco <- FALSE
 variavel-com-hifen <- FALSE
 while <- "Palavra reservada da linguagem"
 
-# Nomes válidos, porém não indicados
+# Nome válido, porém não indicados
 variavel_com_acentuação <- FALSE
 
 # Nomes adequados
@@ -32,8 +32,7 @@ media_2 <- 5
 # Tipos possiveis de variáveis
 
 # Inteiro
-var_tipo_inteiro <- 25
-var_tipo_inteiro2 <- 25L
+var_tipo_inteiro <- 25L
 # Double
 var_tipo_double <- 3.141593
 # complex
@@ -43,28 +42,21 @@ var_tipo_caractere <- 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 # Booleano
 var_tipo_booleano <- TRUE
 
-# Verificando a classe e o tipo da variável
+
+# Verificando o tipo da variável
 
 # Inteiro
-class(var_tipo_inteiro)
 typeof(var_tipo_inteiro)
 
-class(var_tipo_inteiro2)
-typeof(var_tipo_inteiro2)
-
 # Double
-class(var_tipo_double)
 typeof(var_tipo_double)
 
 # Complex
-class(var_tipo_complex)
 typeof(var_tipo_complex)
 
 # Caractere
-class(var_tipo_caractere)
 typeof(var_tipo_caractere)
 
 # Booleano
-class(var_tipo_booleano)
 typeof(var_tipo_booleano)
 
