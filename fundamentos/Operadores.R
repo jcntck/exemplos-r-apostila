@@ -18,14 +18,18 @@ getwd()
 # Divisão
 10 / 2  
 
-# Exponencial
+# Potência
 5 ^ 2   
-# Outra forma de exponencial
+# Outra forma de realizar cálculo de potência
 5 ** 2  
 
 # Modulo (resto da divisão)
 11 %% 2 
 
+# Operador extra
+
+# Divisão inteira
+11 %/% 2
 
 # Operadores Relacionais
 
@@ -44,6 +48,10 @@ getwd()
 # igual a
 'Futebol' == 'Hockey'
 
+# No caso de caractere, o tipo da letra faz diferença
+# Pelo motivo do R ser uma linguagem Case sensitive 
+'FUTEBOL' == 'Futebol'
+
 # diferente de
 9 != 10
 
@@ -56,12 +64,19 @@ finalDeSemana <- TRUE
 diaDePraia <- diaEnsolarado & finalDeSemana
 diaDePraia
 
-# OR
+# Se alguma das duas variáveis for falsa,
+# então a expressão toda se torna falsa.
 finalDeSemana <- FALSE
+diaDePraia <- diaDePraia & finalDeSemana
+diaDePraia
 
+# OR
 diaDePraia <- diaEnsolarado | finalDeSemana
 diaDePraia
 
 # NOT
-diaDePraia <- !diaDePraia
+diaDePraia <- !diaDePraia # Dia de praia era TRUE
 diaDePraia
+
+# Se negarmos novamente, o valor voltará para TRUE
+!diaDePraia
