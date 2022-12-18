@@ -11,7 +11,9 @@ booleanos <- c(TRUE, FALSE, TRUE)
 
 # Criando sequencias de números
 numeros <- 1:10
+numeros
 sequencia <- seq(1, 5)
+sequencia
 
 # Criar vetor de valores repetidos
 rep('N/A', 8)
@@ -20,12 +22,14 @@ is.vector(rep('N/A', 8))
 # Acessando um valor em algum vetor
 nomes[2]
 
+# Adicionanado valores em um vetor
+append(nomes, "Seninha")
+
 # Listas
 listaPessoas <- list(nomes, idades, booleanos)
 listaPessoas
 
 # Acessando os valores da lista
-listaPessoas
 listaPessoas[1]
 listaPessoas[[1]]
 listaPessoas[[1]][3]
@@ -44,6 +48,8 @@ matriz
 # Acessando valores na matriz
 matriz[8]
 matriz[2,3]
+
+matriz
 matriz[,3]
 matriz[2,]
 
