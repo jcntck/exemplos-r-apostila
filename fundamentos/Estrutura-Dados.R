@@ -65,6 +65,15 @@ pessoas[1,]
 pessoas[,3]
 pessoas$nomes[3]
 
+# Listas de dataframes disponibilizados pelo R
+data()
+
+# Explorando um destes dataframes
+View(Titanic)
+
+# Os datasets do R, apesar de muitos parecidos não são do tipo data.frame
+class(Titanic)
+
 # Fatores
 tipoVacina <- c("P", "C", "P")
 pessoas$tipoVacina <- as.factor(tipoVacina)
