@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root encoding="UTF-8">
+  <student>
+    <numberId>3</numberId>
+    <name>Carlos</name>
+    <mathGrade>5</mathGrade>
+    <portugueseGrade>8</portugueseGrade>
+  </student>
+  <student>
+    <numberId>1</numberId>
+    <name>Ana</name>
+    <mathGrade>8</mathGrade>
+    <portugueseGrade>7</portugueseGrade>
+  </student>
+  <student>
+    <numberId>2</numberId>
+    <name>Augusto</name>
+    <mathGrade>6</mathGrade>
+    <portugueseGrade>4</portugueseGrade>
+  </student>
+  <student>
+    <numberId>5</numberId>
+    <name>Sérgio</name>
+    <mathGrade>4</mathGrade>
+    <portugueseGrade>5</portugueseGrade>
+  </student>
+  <student>
+    <numberId>4</numberId>
+    <name>Letícia</name>
+    <mathGrade>9</mathGrade>
+    <portugueseGrade>10</portugueseGrade>
+  </student>
+</root>
