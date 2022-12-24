@@ -24,7 +24,7 @@ rawData
 
 # Convertendo o JSON para lista
 data <- fromJSON(rawData)
-data
+data[[1]]
 
 # Temos nossa lista, porém não é interessante trabalharmos com lista, 
 # vamos converter para data frame
