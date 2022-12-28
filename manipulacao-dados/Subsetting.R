@@ -16,23 +16,25 @@ View(players)
 str(players)
 
 # Selecionando colunas para visualizar a partir de um vetor
-fields <- c("Full.Name", "Value.in.Euro.", "Positions.Played", "Nationality", "Club.Name")
-View(players[fields],)
+fields <- c("Known.As", "Value.in.Euro.", "Positions.Played", "Nationality", "Club.Name")
+View(players[fields])
 
 # Removendo colunas ao visualizar um data frame
-View(players[-1, -3])
+View(players[c(-1, -3)])
 
-# Buscando a 5 primeiras observações
-View(players[1:5,])
+# Cuidado com a virgula
+View(players[c(-1, -3), ])
+
+# Buscando 7 observações dentro do conjunto de dados
+View(players[5:12,])
 
 # Inserindo filtros
-View(players[which(players$Nationality == 'Brazil'),])
+View(players[players$Nationality == 'Brazil',])
 
 # Criando "subset" do data frame principal
 brazilianPlayers <- players[which(players$Nationality == 'Brazil'),]
 View(brazilianPlayers)
 
 # Utilizando a função subset
-View(subset(players, players$Nationality == 'Brazil', select = fields))
-
-
+brazilianPlayers <- subset(players, players$Nationality == 'Brazil', select = fields)
+View(brazilianPlayers)
