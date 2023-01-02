@@ -12,26 +12,26 @@ library(dplyr)
 # Reshape dos dados
 numberId <- c(3, 1, 2, 5, 4)
 name <- c('Carlos', 'Ana', 'Augusto', 'Sérgio', 'Letícia')
-timeExecution1 <- c(1.38, 1.45, 1.39, 1.41, 1.37)
-timeExecution2 <- c(1.39, 1.41, 1.41, 1.39, 1.40)
+timeAttempt1 <- c(1.38, 1.45, 1.39, 1.41, 1.37)
+timeAttempt2 <- c(1.39, 1.41, 1.41, 1.39, 1.40)
 
-swimmingTimes <- data.frame(numberId, name, timeExecution1, timeExecution2)
+swimmingTimes <- data.frame(numberId, name, timeAttempt1, timeAttempt2)
 swimmingTimes
 
 # Juntando as colunas de tempo em uma só
 swimmingTimes %>%
-  pivot_longer(timeExecution1:timeExecution2,
+  pivot_longer(timeAttempt1:timeAttempt2,
                names_to = "Description",
-               values_to = "TimeExecution") %>%
-  arrange(TimeExecution)
+               values_to = "TimeAttempt") %>%
+  arrange(TimeAttempt)
 
 # Desfazendo o passo anterior
 swimmingTimes %>%
-  pivot_longer(timeExecution1:timeExecution2,
+  pivot_longer(timeAttempt1:timeAttempt2,
                names_to = "Description",
-               values_to = "TimeExecution") %>%
+               values_to = "TimeAttempt") %>%
   pivot_wider(names_from = "Description",
-              values_from = "TimeExecution")
+              values_from = "TimeAttempt")
 
 # Carregando o dataset
 players <- read.csv('../datasets/fifa23_players_data.csv')
@@ -53,10 +53,16 @@ players %>%
     into = c("Position1", "Position2"),
     sep = ","
   ) %>%
-  unite(Position1, Position2, col = "Positions.Played", sep = "|") %>%
+  unite(Position1,
+        Position2,
+        col = "Positions.Played",
+        sep = "|",
+        na.rm = TRUE) %>%
   select(Known.As, Positions.Played)
 
 # Resolvendo o problema dos valores 0 no exemplo passado
+# Verificando quantos jogadores tem valor 0
+count(players[players$Value.in.Euro. == 0,])
 
 # Removendo os dados desnecessários para o propósito
 data <- players %>% 
@@ -69,6 +75,7 @@ View(data)
 
 # 2° Passo - Removendo os valores NA do data frame
 data <- data %>% drop_na()
+count(data[data$Value.in.Euro. == 0,])
 
 # 3° Passo - Realizando o agrupamento novamente
 playersValueSummary <- data %>% group_by(Nationality) %>%
